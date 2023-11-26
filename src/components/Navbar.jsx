@@ -4,11 +4,11 @@ import Menu from './Menu'
 
 const Navbar = () => {
   return (
-    <div className=' h-20 md:h-16 flex justify-around items-center border-b-2 border-gray-400'>
+    <div className=' h-20 md:h-16 flex justify-around items-center border-b shadow border-gray-400'>
       <div>
-        <h1 className='text-3xl font-bold'>Portfolio</h1>
+        <h1 className='text-3xl font-bold india'>Akash</h1>
       </div>
-      <div className='hidden md:flex gap-10 text-lg font-medium'>
+      <div className='hidden md:flex gap-10 text-lg font-semibold'>
         <Link href="/">Home</Link>
         <Link href="/">About us</Link>
         <Link href="/">Skills</Link>
@@ -16,7 +16,9 @@ const Navbar = () => {
         <Link href="/">Contact</Link>
       </div>
       <div className='hidden md:flex'>
-        <h1 className='text-2xl'>Email</h1>
+        <a href='mailto:18akashyadav@gmail.com'>
+          <button className='px-8 py-1 hover:bg-black hover:text-white border-2 border-black text-lg font-medium'>Email</button>
+        </a>
       </div>
       {/* MOBILE MENU */}
       <div className="md:hidden">
