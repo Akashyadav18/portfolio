@@ -7,3 +7,14 @@
     color: transparent;
     background-clip: text;
 }
+
+.chevron {
+    transform: translateX(-50%);
+    animation: animateSvg 0.7s infinite linear alternate;
+}
+
+@keyframes animateSvg {
+    to{
+        transform: translate(-50%, 10%);
+    }
+}

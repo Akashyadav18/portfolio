@@ -10,7 +10,7 @@ const Navbar = () => {
       </div>
       <div className='hidden md:flex gap-10 text-lg font-semibold'>
         <Link href="/">Home</Link>
-        <Link href="/">About us</Link>
+        <Link href="#About">About us</Link>
         <Link href="/">Skills</Link>
         <Link href="/">Projects</Link>
         <Link href="/">Contact</Link>

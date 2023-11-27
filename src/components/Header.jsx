@@ -3,7 +3,7 @@
 import React from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 import Link from 'next/link'
-import { ArrowDownToLine, ArrowUpRight, Github, Linkedin } from 'lucide-react';
+import { ArrowDownToLine, ArrowUpRight, ChevronDown, Github, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion'
 import ImageIcon from './ImageIcon';
 
@@ -45,7 +45,7 @@ const Header = () => {
         </motion.div>
         <motion.div className='flex gap-4 md:gap-10 md:my-8' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
           <Link href='#'>
-            <button className='px-2 md:px-4 py-2 bg-red-400 shadow md:text-lg text-sm text-white'>Hire Me</button>
+            <button className='px-2 md:px-4 py-2 bg-red-400 shadow md:text-lg text-sm text-white hover:scale-[1.05] transition'>Hire Me</button>
           </Link>
           <h4 className='flex'>
             <Link href='#' className='pt-2 text-sm sm:text-lg' >Projects</Link>
@@ -53,15 +53,20 @@ const Header = () => {
           </h4>
         </motion.div>
         <motion.div className='flex gap-2 md:gap-8' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          <a className='bg-white p-3 md:px-7 md:py-3 flex justify-center items-center text-center cursor-pointer gap-2 border shadow-md text-sm font-medium md:text-lg md:w-[230px]' 
+          <a className='bg-white p-3 md:px-7 md:py-3 flex justify-center items-center text-center cursor-pointer gap-2 border shadow-md text-sm font-medium md:text-lg md:w-[230px] hover:scale-[1.05] transition' 
             href='/Akash_Web.pdf' download>
             <span className='hidden md:block'>Download CV</span>
-            <ArrowDownToLine />
+            <ArrowDownToLine className='chevron ml-3' />
           </a>
-          <a className='bg-white p-3 md:p-4 flex justify-center items-center cursor-pointer border shadow-md '><Linkedin /></a>
-          <a className='bg-white p-3 md:p-4 flex justify-center items-center cursor-pointer border shadow-md'><Github /></a>
+          <a className='bg-white p-3 md:p-4 flex justify-center items-center cursor-pointer border shadow-md hover:scale-[1.05] transition' href='https://www.linkedin.com/in/akash-yadav-683701262/' target='blank'><Linkedin /></a>
+          <a className='bg-white p-3 md:p-4 flex justify-center items-center cursor-pointer border shadow-md hover:scale-[1.05] transition' href='https://github.com/Akashyadav18' target='blank'><Github /></a>
         </motion.div>
       </div>
+
+      <div className='relative'>
+      <ChevronDown size={50} className='absolute bottom-4 chevron hidden md:block' />
+      </div>
+
       <div className='flex-1 pt-2 grid place-content-center'>
         <ImageIcon/>
       </div>
