@@ -18,15 +18,15 @@ const About = () => {
                 initial={{ x: "100%", opacity: 0}} whileInView={{ x: 0, opacity: 1,}} transition={{ delay: 0.1 }}
                 >
                     <h1 className='py-1 p-3 md:px-5 md:py-2 border-2 border-black w-32 md:w-[150px] mb-4 text-xl md:text-2xl font-semibold'>Hi, There</h1>
-                    <p className=' text-sm sm:text-lg sm:font-medium'>I am <span className='text-color3'> Akash Yadav</span> - a IT graduate with a passion for Frontend developer, Backend developer, Web developer and full stack development, skilled in HTML, CSS, JavaScript, Java, React js, Node js, Express js, Mongo DB, MySQL.
+                    <p className=' text-sm sm:text-lg sm:font-medium'>I&apos;m <span className='text-color3'> Akash Yadav</span> - a IT graduate with a passion for Frontend developer, Backend developer, Web developer and full stack development, skilled in HTML, CSS, JavaScript, Java, React js, Node js, Express js, Mongo DB, MySQL.
 
-                        Apart from coding, I find joy in exploring mountains and playing cricket. As a self-learner, I am dedicated to honing my skills in Next.js and Spring Boot.
+                        Apart from coding, I find joy in exploring mountains and playing cricket. As a self-learner, I&apos;m dedicated to honing my skills in Next.js and Spring Boot.
 
                         During my academic journey, I actively participated in various events, showcasing my commitment and versatility. As a fresher, I bring fresh perspectives and an eagerness to learn.
 
-                        In the future, I aim to leverage my proficiency in technologies like Docker, AWS, and Bun to create innovative solutions. I'm excited about collaborating on projects that push boundaries.
+                        In the future, I aim to leverage my proficiency in technologies like Docker, AWS, and Bun to create innovative solutions. I&apos;m excited about collaborating on projects that push boundaries.
 
-                        Feel free to connect with me on LinkedIn or drop me a message at 18akashyadav@email.com. Let's build something amazing together!</p>
+                        Feel free to connect with me on LinkedIn or drop me a message at 18akashyadav@email.com. Let&apos;s build something amazing together!</p>
                 </motion.div>
             </div>
         </div>
