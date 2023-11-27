@@ -18,7 +18,7 @@ const About = () => {
                 initial={{ x: "100%", opacity: 0}} whileInView={{ x: 0, opacity: 1,}} transition={{ delay: 0.1 }}
                 >
                     <h1 className='py-1 p-3 md:px-5 md:py-2 border-2 border-black w-32 md:w-[150px] mb-4 text-xl md:text-2xl font-semibold'>Hi, There</h1>
-                    <p className=' text-sm sm:text-lg sm:font-medium'>I'm <span className='text-color3'> Akash Yadav</span> - a IT graduate with a passion for Frontend developer, Backend developer, Web developer and full stack development, skilled in HTML, CSS, JavaScript, Java, React js, Node js, Express js, Mongo DB, MySQL.
+                    <p className=' text-sm sm:text-lg sm:font-medium'>I am <span className='text-color3'> Akash Yadav</span> - a IT graduate with a passion for Frontend developer, Backend developer, Web developer and full stack development, skilled in HTML, CSS, JavaScript, Java, React js, Node js, Express js, Mongo DB, MySQL.
 
                         Apart from coding, I find joy in exploring mountains and playing cricket. As a self-learner, I'm dedicated to honing my skills in Next.js and Spring Boot.
 
