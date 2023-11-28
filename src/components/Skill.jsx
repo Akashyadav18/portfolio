@@ -2,8 +2,9 @@
 
 import { skillsData } from '@/utils/data'
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
+import { ThemeContext } from '@/context/ThemeContext'
 
 const animation = {
     initial: {
@@ -21,8 +22,11 @@ const animation = {
 
 
 const Skill = () => {
+
+    const {mode} = useContext(ThemeContext)
+
     return (
-        <div className='h-screen xl:h-[calc(100vh-5rem)] m-4 lg:m-8 md:px-4 lg:px-10 bg-red-100 border shadow-lg'>
+        <div className={`h-screen xl:h-[calc(100vh-5rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-red-100" : null} border shadow-lg`}>
             <h2 className='text-2xl md:text-4xl font-bold text-center py-4 md:p-6'> <span className='text-color3'>My</span> Skills</h2>
 
             <div className='flex overflow-hidden space-x-16 group'>
@@ -107,7 +111,7 @@ const Skill = () => {
             <ul className='flex flex-wrap justify-center items-center gap-2 text-md sm:text-lg text-gray-800 py-10 sm:py-16 xl:w-[700px] mx-auto'>
                 {skillsData.map((skill, index) => (
                     <motion.li
-                        className='bg-white border border-black/[0.1] shadow-md px-3 py-1 md:px-5 md:py-3'
+                        className='bg-white border border-black/[0.1] shadow-md px-3 py-1 md:px-5 md:py-2'
                         key={index}
 
                         variants={animation}

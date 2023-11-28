@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
+import DarkModeToggle from './DarkModeToggle/DarkModeToggle'
 
 const Navbar = () => {
   return (
@@ -14,6 +15,9 @@ const Navbar = () => {
         <Link href="/">Skills</Link>
         <Link href="/">Projects</Link>
         <Link href="/">Contact</Link>
+      </div>
+      <div>
+        <DarkModeToggle/>
       </div>
       <div className='hidden md:flex'>
         <a href='mailto:18akashyadav@gmail.com'>

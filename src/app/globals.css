@@ -24,3 +24,12 @@
         animation-play-state: paused;
     }
 }
+
+.themelight{
+    background-color: white;
+    color: #111;
+}
+.themedark{
+    background-color: #111;
+    color: white;
+}
