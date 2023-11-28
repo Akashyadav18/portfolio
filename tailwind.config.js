@@ -14,8 +14,14 @@ module.exports = {
         color4: '#286f6c',
         color5: '174340',
       },
-      backgroundImage:{
-        'bg_image': "url('/blob.svg')"
+      animation: {
+        "loop-scroll": "loop-scroll 50s linear infinite"
+      },
+      keyframes: {
+        "loop-scroll" : {
+          from: {transform: "translateX(0)"},
+          to: {transform: "translateX(-100%)"},
+        }
       },
     },
   },
