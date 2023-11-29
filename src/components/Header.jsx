@@ -46,7 +46,7 @@ const Header = () => {
           <a className='bg-white text-black p-3 md:px-7 md:py-3 flex justify-center items-center text-center cursor-pointer gap-2 border shadow-md text-sm font-medium md:text-lg md:w-[230px] hover:scale-[1.05] transition' 
             href='/Akash_Web.pdf' download>
             <span className='hidden md:block'>Download CV</span>
-            <ArrowDownToLine className='chevron ml-3 text-black' />
+            <ArrowDownToLine className='chevron ml-3 text-center text-black' />
           </a>
           <a className='bg-white text-black p-3 md:p-4 flex justify-center items-center cursor-pointer border shadow-md hover:scale-[1.05] transition' href='https://www.linkedin.com/in/akash-yadav-683701262/' target='blank'><Linkedin /></a>
           <a className='bg-white text-black p-3 md:p-4 flex justify-center items-center cursor-pointer border shadow-md hover:scale-[1.05] transition' href='https://github.com/Akashyadav18' target='blank'><Github /></a>

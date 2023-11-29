@@ -13,7 +13,7 @@ const DarkModeToggle = () => {
     >
       <div className='text-lg'>🌙</div>
       <div className='text-lg'>🌞</div>
-      <div className='w-[25px] h-[25px] bg-color3 rounded-full absolute' style={mode === "light" ? {left: "4px"} : {right: "4px"}}></div>
+      <div className='w-[25px] h-[25px] bg-color3 rounded-full absolute' style={mode === "light" ? {left: "3px"} : {right: "3px"}}></div>
     </div>
   )
 }
