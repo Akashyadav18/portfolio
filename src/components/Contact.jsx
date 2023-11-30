@@ -29,7 +29,7 @@ const Contact = () => {
               toast.error(error.message);
               return
             }
-            if (data.Status === 200) {
+            if (data) {
               toast.success("Email sent successfully");
               return router.refresh();
             }
