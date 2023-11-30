@@ -1,6 +1,6 @@
 "use client"
 
-import { skillsData } from '@/utils/data'
+import { skillsData } from '../utils/data'
 import Image from 'next/image'
 import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
@@ -26,7 +26,7 @@ const Skill = () => {
     const {mode} = useContext(ThemeContext)
 
     return (
-        <div className={`h-screen xl:h-[calc(100vh-5rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-red-100" : null} overflow-hidden border shadow-lg`}>
+        <div className={`h-screen xl:h-[calc(100vh-4rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-red-100" : null} overflow-hidden border shadow-lg`}>
             <h2 className='text-2xl md:text-4xl font-bold text-center py-4 md:p-6'> <span className='text-color3'>My</span> Skills</h2>
 
             <div className='flex overflow-hidden space-x-16 group'>

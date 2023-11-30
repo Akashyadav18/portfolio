@@ -10,7 +10,7 @@ const About = () => {
     const {mode} = useContext(ThemeContext)
 
     return (
-        <div className={`h-screen xl:h-[calc(100vh-5rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-red-100" : null} overflow-x-hidden border shadow-lg`}>
+        <div className={`h-screen xl:h-[calc(100vh-4rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-red-100" : null} border shadow-lg`}>
             <h2 className='text-2xl md:text-4xl font-bold my-2 md:mt-5 border-b-2 md:border-b-4 md:p-2 text-center  border-black w-32 md:w-48 mx-auto'>About <span className='text-color3'>Me</span> </h2>
             <div className='flex flex-col md:flex-row gap-4 lg:gap-10'>
                 <motion.div className='h-1/2 w-full lg:h-full lg:w-1/3 lg:mt-10 hidden lg:block'

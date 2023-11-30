@@ -13,7 +13,7 @@ const Header = () => {
   const {mode} = useContext(ThemeContext)
 
   return (
-    <div className={`h-[calc(100vh-5rem)] md:h-[calc(100vh-4rem)] w-full ${mode === "light" ? "bg-red-100" : null} flex flex-col-reverse md:flex-row`}>
+    <div className={`h-[calc(100vh-5rem)] md:h-[calc(100vh-4rem)] w-full ${mode === "light" ? "bg-red-100" : null} overflow-hidden flex flex-col-reverse md:flex-row`}>
       <div className='flex-1 py-2 flex flex-col justify-center items-center gap-5'>
         <motion.div className='flex flex-col gap-2 sm:gap-4 md:gap-8' initial={{ x: "-100%", opacity: 0}} whileInView={{ x: 0, opacity: 1,}} transition={{ delay: 0.1 }}>
           <h3 className='text-2xl md:text-5xl font-bold'>Hi,</h3>

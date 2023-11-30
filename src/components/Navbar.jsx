@@ -2,22 +2,23 @@ import Link from 'next/link'
 import React from 'react'
 import Menu from './Menu'
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle'
+import { links } from '@/utils/data'
 
 const Navbar = () => {
   return (
     <div className=' h-20 md:h-16 flex justify-around items-center border-b shadow border-gray-400'>
       <div>
-        <h1 className='text-3xl font-bold india'>Akash</h1>
+        <h1 className='text-3xl font-bold text-color3'>Akash</h1>
       </div>
       <div className='hidden md:flex gap-10 text-lg font-semibold'>
-        <Link href="/">Home</Link>
-        <Link href="#About">About us</Link>
-        <Link href="/">Skills</Link>
-        <Link href="/">Projects</Link>
-        <Link href="/">Contact</Link>
+        {links.map((item) => (
+          <a href={`#${item}`} key={item}>
+            {item}
+          </a>
+        ))}
       </div>
       <div>
-        <DarkModeToggle/>
+        <DarkModeToggle />
       </div>
       <div className='hidden md:flex'>
         <a href='mailto:18akashyadav@gmail.com'>
