@@ -8,21 +8,59 @@ import { ThemeContext } from '@/context/ThemeContext';
 import { SendEmail } from '@/actions/SendEmail';
 import toast, { Toaster } from 'react-hot-toast';
 
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0
+  },
+  whileInView: {
+    x: 0, 
+    opacity: 1,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.1
+    }
+  }
+}
+const formVariants = {
+  initial: {
+    x: 500,
+    opacity: 0
+  },
+  whileInView: {
+    x: 0, 
+    opacity: 1,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.1
+    }
+  }
+}
+
 const Contact = () => {
   const { mode } = useContext(ThemeContext);
-  const formRef = useRef(); 
+  const formRef = useRef();
 
   return (
     <div className={`${mode === "light" ? "bg-red-100" : null}`}>
-     <Toaster position="top-right"/>
+      <Toaster position="top-right" />
       <h2 className='text-2xl md:text-4xl font-bold text-center py-2'>Contact <span className='text-color3'>Me</span></h2>
       <div className='h-[calc(100vh-7rem)] w-full flex flex-col md:flex-row justify-evenly items-center'>
         <motion.div className='relative w-full h-1/2 md:h-full md:w-1/2'
-          initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+          variants={textVariants} initial="initial" animate="animate"
         >
-          <Image src='/vg.png' alt='contact' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
+          <Image src='/vg.png' alt='contact' fill className='object-contain object-center overflow-hidden shrink-0 my-auto' />
         </motion.div>
-        <motion.div className='h-2/3 w-full md:h-full md:w-2/3 md:pt-32 xl:pt-46' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+        <motion.div className='h-2/3 w-full md:h-full md:w-2/3 md:pt-32 xl:pt-46'
+          variants={formVariants} initial="initial" animate="animate">
           <form ref={formRef} action={async (formData) => {
             const { data, error } = await SendEmail(formData);
             if (error) {

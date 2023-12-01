@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <div className='hidden md:flex'>
         <a href='mailto:18akashyadav@gmail.com'>
-          <button className='px-8 py-1 hover:bg-black hover:text-white border-2 border-black text-lg font-medium'>Email</button>
+          <button className='px-8 py-1 hover:bg-black hover:text-white border-2 border-gray-500 text-lg font-medium'>Email</button>
         </a>
       </div>
       {/* MOBILE MENU */}
