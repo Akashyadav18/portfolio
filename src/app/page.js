@@ -17,7 +17,9 @@ export default function Home() {
     <section id="Skill" className="scroll-mt-9">
       <Skill/>
     </section> 
+    <section id="Project">
       <Project/>
+    </section>
     <section id="Contact" >
       <Contact/>
     </section>
