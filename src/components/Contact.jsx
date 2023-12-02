@@ -73,7 +73,7 @@ const Contact = () => {
               formRef.current.reset();
             }
           }}
-            className='flex flex-col flex-wrap gap-2 md:gap-[20px] max-w-[250px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] mx-auto'>
+            className='flex flex-col flex-wrap gap-2 md:gap-[20px] w-[250px] sm:w-[300px] md:w-[400px] lg:w-[500px] mx-auto'>
             <input type='text' name='name' className='p-2 md:p-3 border-2 text-black border-gray-400 shadow outline-none' required placeholder='Name' />
             <input type='email' name='email' className='p-2 md:p-3 border-2 text-black border-gray-400 shadow outline-none' placeholder='Email' />
             <textarea rows={5} name='message' className='p-1 border-2 text-black border-gray-400 shadow outline-none' placeholder='Message' />
