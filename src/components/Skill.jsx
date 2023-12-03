@@ -32,7 +32,7 @@ const Skill = () => {
             <div className='flex overflow-hidden space-x-16 group'>
 
                 <div className='flex space-x-16 animate-loop-scroll group-hover:Paused'>
-                    <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
+                    <div className='relative w-[150px] h-[150px] lg:w-[200px] lg:h-[200px]'>
                         <Image src='/html.png' alt='html' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                     <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
@@ -69,7 +69,7 @@ const Skill = () => {
 
 
                 <div className='flex space-x-16 animate-loop-scroll group-hover:Paused' aria-hidden="true">
-                    <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
+                    <div className='relative w-[150px] h-[150px] lg:w-[200px] lg:h-[200px]'>
                         <Image src='/html.png' alt='html' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                     <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
