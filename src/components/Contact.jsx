@@ -50,7 +50,7 @@ const Contact = () => {
   const formRef = useRef();
 
   return (
-    <div className={`${mode === "light" ? "bg-red-100" : null}`}>
+    <div className={`${mode === "light" ? "bg-red-100" : null} border-t`}>
       <Toaster position="top-right" />
       <h2 className='text-2xl md:text-4xl font-bold text-center py-2'>Contact <span className='text-color3'>Me</span></h2>
       <div className='h-[calc(100vh-7rem)] w-full flex flex-col md:flex-row justify-evenly items-center'>
