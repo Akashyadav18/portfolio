@@ -8,13 +8,13 @@ export default function Home() {
   return (
     <>
     {/* className="scroll-mt-8" */}
-    <section id="Home" className="scroll-mt-0">
+    <section id="Home" className="scroll-mt-16">
       <Header/>
     </section>
-    <section id="About" className="scroll-mt-8">
+    <section id="About" className="md:scroll-mt-8">
       <About />
     </section>
-    <section id="Skill" className="scroll-mt-9">
+    <section id="Skill" className="md:scroll-mt-8">
       <Skill/>
     </section> 
     <section id="Project">

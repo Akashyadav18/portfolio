@@ -8,6 +8,25 @@ import { motion } from 'framer-motion'
 import ImageIcon from './ImageIcon';
 import { ThemeContext } from '@/context/ThemeContext';
 
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0
+  },
+  whileInView: {
+    x: 0, 
+    opacity: 1,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      staggerChildren: 0.1
+    }
+  }
+}
+
 const Header = () => {
 
   const {mode} = useContext(ThemeContext)
@@ -15,7 +34,7 @@ const Header = () => {
   return (
     <div className={`h-[calc(100vh-5rem)] md:h-[calc(100vh-4rem)] w-full ${mode === "light" ? "bg-red-100" : null} overflow-hidden flex flex-col-reverse md:flex-row`}>
       <div className='flex-1 py-2 flex flex-col justify-center items-center gap-5'>
-        <motion.div className='flex flex-col gap-2 sm:gap-4 md:gap-8' initial={{ x: "-100%", opacity: 0}} whileInView={{ x: 0, opacity: 1,}} transition={{ delay: 0.1 }}>
+        <motion.div className='flex flex-col gap-2 sm:gap-4 md:gap-8' variants={textVariants} initial="initial" animate="animate">
           <h3 className='text-2xl md:text-5xl font-bold'>Hi,</h3>
           <h2 className='text-2xl md:text-5xl font-bold'>I&apos;m Akash Yadav</h2>
           <h2 className='text-xl md:text-4xl font-semibold'>
@@ -34,11 +53,11 @@ const Header = () => {
           </h2>
         </motion.div>
         <motion.div className='flex gap-4 md:gap-10 md:my-8' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          <Link href='#'>
+          <a href='#Contact'>
             <button className='px-2 md:px-4 py-2 bg-red-400 shadow md:text-lg text-sm text-white hover:scale-[1.05] transition'>Hire Me</button>
-          </Link>
+          </a>
           <h4 className='flex'>
-            <Link href='#' className='pt-2 text-sm sm:text-lg' >Projects</Link>
+            <a href='#Project' className='pt-2 text-sm sm:text-lg' >Projects</a>
             <ArrowUpRight size={20} />
           </h4>
         </motion.div>
