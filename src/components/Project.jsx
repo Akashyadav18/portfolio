@@ -46,16 +46,16 @@ const Single = ({ project }) => {
     return (
       <section ref={ref} >
         <div className='flex flex-col md:flex-row justify-center items-center md:p-4 max-w-[1200px] h-screen md:h-[calc(100vh-10rem)] m-auto'>
-          <motion.div className='flex-1 bg-white flex flex-col justify-evenly items-center gap-2 md:gap-3 p-4 text-black items-center rounded-md shadow-lg'>
+          <motion.div className='flex-1 bg-white flex flex-col justify-evenly items-center gap-2 md:gap-3 p-4 text-black rounded-md shadow-lg'>
             <h2 className='text-2xl md:4xl font-semibold'>{project.title}</h2>
             <div className='text-sm md:text-[16px]'>
               {project.desc1 && <p>{project.desc1}</p>}
-              {project.desc2 && <p>{project.desc2}</p>}
+              {project.desc2 && <p> {project.desc2}</p>}
               {project.desc3 && <p>{project.desc3}</p>}
             </div>
             <ul className='flex gap-1 md:gap-2 flex-wrap text-sm'>
               {project.tools && project.tools.map((tool, index) => (
-                <button key={index} className='px-2 py-1 rounded-md md:px-4 md:py-1 border rounded-md'>
+                <button key={index} className='px-2 py-1 md:px-4 md:py-1 border rounded-md'>
                   {tool}
                 </button>
               ))}
@@ -117,7 +117,7 @@ const Project = () => {
     <div className={`relative z-10 pb-6 ${mode === "light" ? "bg-red-100" : null}`} ref={ref}>
       {/* progress */}
       <div className='sticky top-0 left-0 text-center text-2xl md:text-4xl font-bold'>
-        <h1 className='bg-backdrop-blur-lg bg-white/30 p-2'><span className='text-color3'>My</span> Projects</h1>
+        <h1 className='bg-backdrop-blur-lg bg-white/70 p-2'><span className='text-color3'>My</span> Projects</h1>
         {/* progressBar */}
         <motion.div style={{ scaleX }} className='h-[10px] my-1 bg-color3'></motion.div>
       </div>

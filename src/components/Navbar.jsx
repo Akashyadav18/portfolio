@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className=' h-20 md:h-16 flex justify-around items-center border-b shadow border-gray-400'>
       <div>
-        <h1 className='text-3xl font-bold text-red-500'>Akash</h1>
+        <h1 className='text-3xl font-bold text-red-400'>Akash</h1>
       </div>
       <div className='hidden md:flex gap-10 text-lg items-center text-gray-600 font-semibold'>
         {links.map((item, index) => (
