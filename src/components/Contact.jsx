@@ -78,7 +78,7 @@ const Contact = () => {
             <input type='email' name='email' className='p-2 md:p-3 border-2 text-black border-gray-400 shadow outline-none' placeholder='Email' />
             <textarea rows={5} name='message' className='p-1 border-2 text-black border-gray-400 shadow outline-none' placeholder='Message' />
             <button type='submit' className='px-4 py-2 border-2 shadow bg-white outline-none max-w-[200px] mx-auto border-gray-400 flex items-center gap-2 text-lg font-medium text-gray-400 hover:text-black hover:scale-[1.05] transition'>Send Message  
-            <Send size={18} className='text-black'/> </button>
+            <Send size={20} className='text-black pl-1 chevron'/> </button>
           </form>
         </motion.div>
       </div>

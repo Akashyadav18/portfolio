@@ -17,7 +17,7 @@ const Navbar = () => {
       </div>
       <div className='hidden md:flex gap-10 text-lg items-center text-gray-600 font-semibold'>
         {links.map((item, index) => (
-          <a href={`#${item}`} key={item} className={`hover:text-black ${activeIndex == index ? "border px-3 py-1 rounded-full bg-gray-100 text-black" : null} `} 
+          <a href={`#${item}`} key={item} className={`hover:text-gray-400 ${activeIndex == index ? "border px-3 py-1 rounded-full bg-gray-100 text-black" : null} `} 
            onClick={() => setActiveIndex(index)}
           >
             {item}

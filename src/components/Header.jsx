@@ -35,16 +35,16 @@ const Header = () => {
     <div className={`h-[calc(100vh-5rem)] md:h-[calc(100vh-4rem)] w-full ${mode === "light" ? "bg-red-100" : null} overflow-hidden flex flex-col-reverse md:flex-row`}>
       <div className='flex-1 py-2 flex flex-col justify-center items-center gap-5'>
         <motion.div className='flex flex-col gap-2 sm:gap-4 md:gap-8' variants={textVariants} initial="initial" animate="animate">
-          <h3 className='text-2xl md:text-5xl font-bold'>Hi,</h3>
-          <h2 className='text-2xl md:text-5xl font-bold'>I&apos;m Akash Yadav</h2>
+          <h3 className='text-3xl md:text-5xl font-bold'>Hi,</h3>
+          <h2 className='text-3xl md:text-5xl font-bold'>I&apos;m Akash Yadav </h2>
           <h2 className='text-xl md:text-4xl font-semibold'>
             A {' '}
             <span>
               <Typewriter
-                words={['Developer', 'Designer', 'Creator']}
+                words={['Frontend Developer', 'Backend Developer', 'Web Developer', 'Full Stack Developer']}
                 loop={'true'}
                 cursor
-                cursorStyle='_'
+                cursorStyle=''
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
