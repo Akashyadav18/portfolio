@@ -41,7 +41,7 @@ const Header = () => {
             A {' '}
             <span>
               <Typewriter
-                words={['Frontend Developer', 'Backend Developer', 'Web Developer', 'Full Stack Developer']}
+                words={['Frontend Developer', 'Backend Developer', 'Web Developer', 'MERN Stack Developer' ,'Full Stack Developer']}
                 loop={'true'}
                 cursor
                 cursorStyle=''

@@ -8,7 +8,7 @@ const formVariants = {
     opacity: 0
   },
   whileInView: {
-    x: 0, 
+    x: 0,
     opacity: 1,
   },
   animate: {
@@ -23,12 +23,14 @@ const formVariants = {
 
 const ImageIcon = () => {
   return (
-    <motion.div className='h-full w-full ring-8 ring-color2 rounded-full shadow-lg' 
-    variants={formVariants} initial="initial" animate="animate">
-      <div className="bg-bg_image bg-no-repeat bg-center relative mx-auto w-[250px] h-[250px] md:w-[350px] md:h-[350px] xl:w-[400px] xl:h-[400px]">
-        <Image src="/p1.png" alt='image' fill className='object-contain'/>
-      </div>
-    </motion.div>
+    <div className=''>
+      <motion.div className='h-full w-full ring-8 ring-color2 rounded-full shadow-lg'
+        variants={formVariants} initial="initial" animate="animate">
+        <div className="bg-bg_image bg-no-repeat bg-center relative mx-auto w-[250px] h-[250px] md:w-[350px] md:h-[350px] xl:w-[400px] xl:h-[400px]">
+          <Image src="/p1.png" alt='image' fill className='object-contain' />
+        </div>
+      </motion.div>
+    </div>
   )
 }
 
