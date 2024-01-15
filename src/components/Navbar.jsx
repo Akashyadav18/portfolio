@@ -4,10 +4,12 @@ import React, { useState } from 'react'
 import Menu from './Menu'
 import DarkModeToggle from './DarkModeToggle/DarkModeToggle'
 import { links } from '@/utils/data'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
 
-  const [activeIndex, setActiveIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0);
+  const pathName = usePathname();
 
 
   return (
@@ -17,7 +19,7 @@ const Navbar = () => {
       </div>
       <div className='hidden md:flex gap-10 text-lg items-center text-gray-600 font-semibold'>
         {links.map((item, index) => (
-          <a href={`#${item}`} key={item} className={`hover:text-gray-400 ${activeIndex == index ? "border px-3 py-1 rounded-full bg-gray-100 text-black" : null} `} 
+          <a href={`#${item}`} key={item} className={`hover:text-gray-400 ${pathName === index ? "border px-3 py-1 rounded-full bg-gray-100 text-black" : null} `} 
            onClick={() => setActiveIndex(index)}
           >
             {item}
