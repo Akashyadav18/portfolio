@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       colors : {
-        color1: '#fef2f2',
-        color2: 'rgb(249, 141, 141)',
+        bgColor: '#F3F4F6',
+        bgColor2: "#f4f4f5",
         color3: '#f26440',
-        color4: '#286f6c',
-        color5: '174340',
+        btnHover: "#c93f1d",
+        blur: "#FDFDFD"
       },
       animation: {
         "loop-scroll": "loop-scroll 50s linear infinite"

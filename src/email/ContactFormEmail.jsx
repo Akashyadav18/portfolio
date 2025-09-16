@@ -1,15 +1,5 @@
 import React from 'react'
-import {
-    Html,
-    Body,
-    Head,
-    Hr,
-    Container,
-    Preview,
-    Section,
-    Text,
-    Heading
-} from "@react-email/components"
+import {Html,Body,Head,Hr,Container,Preview,Section,Text,Heading} from "@react-email/components"
 import { Tailwind } from '@react-email/components'
 
 const ContactFormEmail = ({name, email, message}) => {

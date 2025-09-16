@@ -22,16 +22,16 @@ const animation = {
 
 
 const Skill = () => {
-
     const {mode} = useContext(ThemeContext)
 
     return (
-        <div className={`h-screen xl:h-[calc(100vh-4rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-red-100" : null} overflow-hidden border shadow-lg`}>
-            <h2 className='text-2xl md:text-4xl font-bold text-center py-4 md:p-6'> <span className='text-color3'>My</span> Skills</h2>
+        <div className={`min-h-screen md:h-screen xl:h-[calc(100vh-4rem)] m-4 lg:m-8 md:px-4 lg:px-10 ${mode === "light" ? "bg-bgColor2" : null} overflow-hidden border shadow-lg flex flex-col`}>
+            <h2 className='text-2xl md:text-4xl font-bold text-center mb-10 py-4 md:p-6'> 
+                <span className='text-color3'>My</span> Skills
+            </h2>
 
-            <div className='flex overflow-hidden space-x-16 group'>
-
-                <div className='flex space-x-16 animate-loop-scroll group-hover:Paused'>
+            <div className='flex overflow-hidden space-x-16 group flex-shrink-0'>
+                <div className='flex justify-center items-center space-x-16 animate-loop-scroll group-hover:Paused'>
                     <div className='relative w-[150px] h-[150px] lg:w-[200px] lg:h-[200px]'>
                         <Image src='/html.png' alt='html' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
@@ -60,13 +60,12 @@ const Skill = () => {
                         <Image src='/next.png' alt='next' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                     <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
-                        <Image src='/graphql.png' alt='graphql' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
+                        <Image src='/Spring.png' alt='graphql' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                     <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
                         <Image src='/java.svg' alt='java' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                 </div>
-
 
                 <div className='flex space-x-16 animate-loop-scroll group-hover:Paused' aria-hidden="true">
                     <div className='relative w-[150px] h-[150px] lg:w-[200px] lg:h-[200px]'>
@@ -97,36 +96,34 @@ const Skill = () => {
                         <Image src='/next.png' alt='next' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                     <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
-                        <Image src='/graphql.png' alt='graphql' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
+                        <Image src='/Spring.png' alt='graphql' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                     <div className='relative w-[150px] h-[150px] md:w-[200px] md:h-[200px]'>
                         <Image src='/java.svg' alt='java' fill className='object-contain object-center overflow-hidden shrink-0 max-w-full my-auto' />
                     </div>
                 </div>
-
             </div>
 
             {/* buttons */}
-
-            <ul className='flex flex-wrap justify-center items-center gap-2 text-md sm:text-lg text-gray-800 py-10 sm:py-16 xl:w-[700px] mx-auto'>
-                {skillsData.map((skill, index) => (
-                    <motion.li
-                        className='bg-white border border-black/[0.1] rounded-md shadow-md px-3 py-1 md:px-5 md:py-2'
-                        key={index}
-
-                        variants={animation}
-                        initial="initial"
-                        whileInView="animate"
-                        viewport={{
-                            once: true,
-                        }}
-                        custom={index}
-                    >
-                        {skill}
-                    </motion.li>
-                ))}
-            </ul>
-
+            <div className='flex-grow flex items-center justify-center'>
+                <ul className='flex flex-wrap justify-center items-center gap-2 text-md sm:text-lg py-6 sm:py-8 xl:w-[700px] mx-auto'>
+                    {skillsData.map((skill, index) => (
+                        <motion.li
+                            className={` border-2 ${mode === "light" ? "border-black bg-white" : "border-black bg-white text-black"} hover:scale-[1.05] transition shadow-md px-3 py-1 md:px-5 md:py-2`}
+                            key={index}
+                            variants={animation}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{
+                                once: true,
+                            }}
+                            custom={index}
+                        >
+                            {skill}
+                        </motion.li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }
