@@ -105,66 +105,77 @@ const Single = ({ project }) => {
 
 const Mobile = ({ project }) => {
   const { mode } = useContext(ThemeContext)
-
   return (
-    <section>
+    <section className="px-2 sm:px-4">
       <div
         key={project.id}
-        className="relative flex flex-col justify-center items-center w-[95%] max-w-[420px] mx-auto my-6 rounded-lg overflow-hidden shadow-lg"
+        className="relative w-full max-w-[420px] mx-auto my-6 rounded-lg overflow-hidden shadow-lg"
       >
-        {/* Image */}
-        <div className="relative w-full h-[420px] sm:h-[500px]">
-          <Image
-            src={project.img}
-            alt="projectImg"
-            fill
-            className="object-cover rounded-lg"
-          />
-
-          {/* Transparent overlay text container */}
-          <motion.div
-            className="absolute inset-0 bg-white/60 backdrop-blur-sm p-4 flex flex-col justify-center gap-4 rounded-lg"
-          >
-            {/* Title */}
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{project.title}</h2>
-
-            {/* Bullet Points */}
-            <ul className="list-disc list-inside text-sm sm:text-base text-gray-800 space-y-1">
-              {project.desc1 && <li>{project.desc1}</li>}
-              {project.desc2 && <li>{project.desc2}</li>}
-              {project.desc3 && <li>{project.desc3}</li>}
-            </ul>
-
-            {/* Tools */}
-            <ul className="flex gap-2 flex-wrap">
-              {project.tools && project.tools.map((tool, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 rounded-full text-xs sm:text-sm font-medium bg-[#286f6c]/10 text-gray-900"
-                >
-                  {tool}
-                </span>
-              ))}
-            </ul>
-
-            {/* Buttons */}
-            <div className="flex gap-4 mt-2">
-              {project.github && (
-                <a href={project.github} target="blank">
-                  <button className="px-4 py-2 flex items-center gap-2 text-sm font-semibold bg-[#286f6c] text-white hover:bg-[#1f5552] hover:scale-105 transition-transform">
-                    Github <Github size={16} />
-                  </button>
-                </a>
-              )}
-              {project.demo && (
-                <a href={project.demo} target="blank">
-                  <button className="px-4 py-2 flex items-center gap-2 text-sm font-semibold bg-gray-800 text-white hover:bg-gray-900 hover:scale-105 transition-transform">
-                    Demo <ArrowUpRightSquare size={16} />
-                  </button>
-                </a>
-              )}
-            </div>
-          </motion.div>
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center rounded-lg"
+          style={{ backgroundImage: `url(${project.img})` }}
+        />
+        
+        {/* Content Container - this drives the height */}
+        <div className="relative bg-white/60 backdrop-blur-sm p-4 sm:p-6 rounded-lg min-h-[400px] sm:min-h-[450px] flex flex-col justify-center gap-3 sm:gap-4">
+          {/* Title */}
+          <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight">
+            {project.title}
+          </h2>
+          
+          {/* Bullet Points */}
+          <ul className="list-disc list-inside text-xs sm:text-sm md:text-base text-gray-800 space-y-2 sm:space-y-3">
+            {project.desc1 && (
+              <li className="leading-relaxed pl-1">{project.desc1}</li>
+            )}
+            {project.desc2 && (
+              <li className="leading-relaxed pl-1">{project.desc2}</li>
+            )}
+            {project.desc3 && (
+              <li className="leading-relaxed pl-1">{project.desc3}</li>
+            )}
+          </ul>
+          
+          {/* Tools */}
+          <div className="flex gap-2 flex-wrap">
+            {project.tools && project.tools.map((tool, index) => (
+              <span
+                key={index}
+                className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium bg-[#286f6c]/10 text-gray-900 border border-[#286f6c]/20"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+          
+          {/* Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 sm:mt-4">
+            {project.github && (
+              <a 
+                href={project.github} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none"
+              >
+                <button className="w-full sm:w-auto px-4 py-2.5 flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold bg-[#286f6c] text-white hover:bg-[#1f5552] hover:scale-105 transition-all duration-200 rounded-md shadow-sm">
+                  Github <Github size={14} className="sm:w-4 sm:h-4" />
+                </button>
+              </a>
+            )}
+            {project.demo && (
+              <a 
+                href={project.demo} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none"
+              >
+                <button className="w-full sm:w-auto px-4 py-2.5 flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold bg-gray-800 text-white hover:bg-gray-900 hover:scale-105 transition-all duration-200 rounded-md shadow-sm">
+                  Demo <ArrowUpRightSquare size={14} className="sm:w-4 sm:h-4" />
+                </button>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </section>
